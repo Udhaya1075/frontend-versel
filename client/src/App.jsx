@@ -10,13 +10,13 @@ function App() {
     //Get students from the database
     const getStudents = async () => {
        
-            const res = await axios.get("http://localhost:5000/students");
+            const res = await axios.get("https://backend-render-fcw7.onrender.com/students");
             setStudents(res.data);
     }
 
     //Add a student 
     const addStudent = async () => {
-        await axios.post("http://localhost:5000/add",{
+        await axios.post("https://backend-render-fcw7.onrender.com/add",{
             name,
             course
         });
@@ -27,7 +27,7 @@ function App() {
 
     //Delete a student
     const deleteStudent = async (id) => {
-        await axios.delete(`http://localhost:5000/delete/${id}`);
+        await axios.delete(`https://backend-render-fcw7.onrender.com/delete/${id}`);
         getStudents();
     }
 
